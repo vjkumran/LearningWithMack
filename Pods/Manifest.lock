@@ -1,0 +1,15 @@
+PODS:
+  - Canvas (0.1.2)
+  - DCAnimationKit (0.0.6)
+
+DEPENDENCIES:
+  - Canvas (~> 0.1)
+  - DCAnimationKit
+
+SPEC CHECKSUMS:
+  Canvas: eb861e3b555d032648146c8ffda1a5dea40059ca
+  DCAnimationKit: 7133bef877ce1aa113dcfeea1380ca67f91f7608
+
+PODFILE CHECKSUM: 91d8387828ea17000e944847fa2324d7c29eff01
+
+COCOAPODS: 1.1.1
