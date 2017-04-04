@@ -10,7 +10,7 @@ One day I was listening to my brother practice his ABCs.  I tried to download th
 
 # Installation
 
-Before installing Learning with Mack
+Before installing Learning with Mack make sure you have the following:
 * Xcode 8 with latest update.
 * Apple phone or tablet.
 * iOS 10 or later.
@@ -30,7 +30,7 @@ ABC features:
 
 Word Game features:
 * Point system
-* each image matches the correct word
+* Each image matches the correct word
 * Now has leaderboard to challenge your friends.
 
 Future features:
