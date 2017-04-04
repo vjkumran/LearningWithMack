@@ -22,6 +22,7 @@ You are free to copy, modify and distribute Learning with Mack with attribution 
 # Latest Updates
 * Update to UI & UX
 * Replaced some images that did not mix well with background.
+* Leaderboards
 
 ABC features:
 * Pronounce Letter with sound button
@@ -30,8 +31,8 @@ ABC features:
 Word Game features:
 * Point system
 * each image matches the correct word
+* Now has leaderboard to challenge your friends.
 
 Future features:
 * Achievements
-* Leaderboards
 * In-app purchases
