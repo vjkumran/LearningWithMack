@@ -1,4 +1,4 @@
-# LearnWithMack
+# Learning With Mack
 https://github.com/etty427/LearningWithMack
 Copyright Ty Rainey 2017
 
