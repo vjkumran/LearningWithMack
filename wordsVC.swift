@@ -32,9 +32,6 @@ class wordsVC: UIViewController {
         points = 0
         counter = 0
         picResize()
-        
-
-     
     }
     
     
@@ -42,18 +39,13 @@ class wordsVC: UIViewController {
         counter += 1
         imageChanger()
         
-        
     }
     
     func newGame() {
         
-        
-        
-        
         letterLabel.text = myLetters.wordsForGame[currentWord]
         
         correctChoicePlacement = arc4random_uniform(UInt32(3))+1
-        
         
         var x = 1
         
@@ -65,8 +57,6 @@ class wordsVC: UIViewController {
                 button.layer.cornerRadius = 8
                 button.layer.masksToBounds = true
                 button.layer.shadowOpacity = 0.5
-                
-            
                 
                 if (i == Int(correctChoicePlacement)) {
                 
@@ -82,10 +72,6 @@ class wordsVC: UIViewController {
             }
         }
                     currentWord += 1
-        
-        
-        
-        
     }
     
     func picResize() {
@@ -95,11 +81,7 @@ class wordsVC: UIViewController {
         
     }
     
-
-    
     @IBAction func wordButton(_ sender: AnyObject) {
-        
-        
         
         if (sender.tag == Int(correctChoicePlacement)) {
             
@@ -110,8 +92,7 @@ class wordsVC: UIViewController {
         else {
             
             print("Wrong")
-            
-            
+    
         }
         
         if (currentWord != myLetters.wordsForGame.count) {
@@ -119,11 +100,7 @@ class wordsVC: UIViewController {
             
         }
         else {
-            
-
-            
         
-
             let alert = UIAlertController(title: "Your Score",
                                           message: "You scored \(points) points.",
                                           preferredStyle: .alert)
@@ -138,8 +115,6 @@ class wordsVC: UIViewController {
                 self.imageChanger()
                 
             })
-        
-            
             // Add action buttons and present the Alert
             alert.addAction(action1)
             
@@ -154,8 +129,6 @@ class wordsVC: UIViewController {
         if counter <= 25 {
             
             picOfWordsImage.image = UIImage(named: myLetters.imagesForWordGame[counter])
-            
-            
             
         }
         
