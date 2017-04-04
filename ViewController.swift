@@ -35,7 +35,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         counter = 0
         imageInt = 0
         
-       createGradientLayers()
+        imageView.layer.cornerRadius = 7
     }
     
     
@@ -106,19 +106,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
     }
     
-    func createGradientLayers() {
-        
-        gradientLayer = CAGradientLayer()
-        
-        gradientLayer.frame = self.view.bounds
-        
-        gradientLayer.colors = [UIColor.white.cgColor, UIColor.yellow.cgColor]
-        
-        self.backgroundView.layer.addSublayer(gradientLayer)
-        
-        gradientLayer.locations = [0.0, 0.0]
-        
-    }
 }
 
 

@@ -9,6 +9,8 @@
 import UIKit
 
 
+
+
 class wordsVC: UIViewController {
     
     let myLetters = letter()
@@ -117,6 +119,10 @@ class wordsVC: UIViewController {
             
         }
         else {
+            
+
+            
+        
 
             let alert = UIAlertController(title: "Your Score",
                                           message: "You scored \(points) points.",
@@ -132,17 +138,17 @@ class wordsVC: UIViewController {
                 self.imageChanger()
                 
             })
-            
         
-            
             
             // Add action buttons and present the Alert
             alert.addAction(action1)
-           
+            
 
             present(alert, animated: true, completion: nil)
+            
             }
     }
+    
     func imageChanger() {
         
         if counter <= 25 {
