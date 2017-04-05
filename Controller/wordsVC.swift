@@ -18,6 +18,10 @@ class wordsVC: UIViewController, GKGameCenterControllerDelegate {
     var correctChoicePlacement: UInt32 = 0
     var points = Int()
     var counter = Int()
+    var shows​Completion​Banner = true
+
+    
+    
     
     @IBOutlet weak var picOfWordsImage: UIImageView!
     @IBOutlet weak var pointsLabel: UILabel!
@@ -27,7 +31,7 @@ class wordsVC: UIViewController, GKGameCenterControllerDelegate {
     var gcEnabled = Bool() // Check if the user has Game Center enabled
     var gcDefaultLeaderBoard = String() // Check the default leaderboardID
     
-    var score = 0
+    
     
     func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
         gameCenterViewController.dismiss(animated: true, completion: nil)
@@ -36,47 +40,46 @@ class wordsVC: UIViewController, GKGameCenterControllerDelegate {
     // IMPORTANT: replace the red string below with your own Leaderboard ID (the one you've set in iTunes Connect)
     let LEADERBOARD_ID = "com.rainmantechnologies.learningWithMack"
     
-    func authenticateLocalPlayer() {
-        let localPlayer: GKLocalPlayer = GKLocalPlayer.localPlayer()
-        
-        localPlayer.authenticateHandler = {(ViewController, error) -> Void in
-            if((ViewController) != nil) {
-                // 1. Show login if player is not logged in
-                self.present(ViewController!, animated: true, completion: nil)
-            } else if (localPlayer.isAuthenticated) {
-                // 2. Player is already authenticated & logged in, load game center
-                self.gcEnabled = true
-                
-                // Get the default leaderboard ID
-                localPlayer.loadDefaultLeaderboardIdentifier(completionHandler: { (leaderboardIdentifer, error) in
-                    if error != nil { print(error!)
-                    } else { self.gcDefaultLeaderBoard = leaderboardIdentifer! }
-                })
-                
-            } else {
-                // 3. Game center is not enabled on the users device
-                self.gcEnabled = false
-                print("Local player could not be authenticated!")
-                print(error!)
-            }
-        }
-    }
-    
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Call the GC authentication controller
-        authenticateLocalPlayer()
         
-
+        func authenticateLocalPlayer() {
+            let localPlayer: GKLocalPlayer = GKLocalPlayer.localPlayer()
+            
+            localPlayer.authenticateHandler = {(ViewController, error) -> Void in
+                if((ViewController) != nil) {
+                    // 1. Show login if player is not logged in
+                    self.present(ViewController!, animated: true, completion: nil)
+                } else if (localPlayer.isAuthenticated) {
+                    // 2. Player is already authenticated & logged in, load game center
+                    self.gcEnabled = true
+                    
+                    // Get the default leaderboard ID
+                    localPlayer.loadDefaultLeaderboardIdentifier(completionHandler: { (leaderboardIdentifer, error) in
+                        if error != nil { print(error!)
+                        } else { self.gcDefaultLeaderBoard = leaderboardIdentifer! }
+                    })
+                    
+                } else {
+                    // 3. Game center is not enabled on the users device
+                    self.gcEnabled = false
+                    self.shows​Completion​Banner = false
+                    print("Local player could not be authenticated!")
+                    print(error!)
+                }
+            }
+        }
         
         imageChanger()
         newGame()
         points = 0
         counter = 0
         picResize()
+        // Call the GC authentication controller
+        authenticateLocalPlayer()
     }
     
     
@@ -128,11 +131,7 @@ class wordsVC: UIViewController, GKGameCenterControllerDelegate {
     }
     @IBAction func leaderboardButtonPressed(_ sender: Any) {
         
-        let gcVC = GKGameCenterViewController()
-        gcVC.gameCenterDelegate = self 
-        gcVC.viewState = .leaderboards
-        gcVC.leaderboardIdentifier = LEADERBOARD_ID
-        present(gcVC, animated: true, completion: nil)
+
         
         
     }
@@ -163,21 +162,6 @@ class wordsVC: UIViewController, GKGameCenterControllerDelegate {
                                           preferredStyle: .alert)
             let action1 = UIAlertAction(title: "Play Again?", style: .default, handler: { (action) -> Void in
                 
-                // Add 10 points to current score
-                self.score += 10
-                self.pointsLabel.text = "\(self.score)"
-                
-                // Submit score to GC leaderboard
-                let bestScoreInt = GKScore(leaderboardIdentifier: self.LEADERBOARD_ID)
-                bestScoreInt.value = Int64(self.score)
-                GKScore.report([bestScoreInt]) { (error) in
-                    if error != nil {
-                        print(error!.localizedDescription)
-                    } else {
-                        print("Best Score submitted to your Leaderboard!")
-                    }
-                }
-                
                 self.currentWord = Int(arc4random_uniform(UInt32(3)))
                 self.currentWord = 0
                 self.correctChoicePlacement = 0
@@ -187,13 +171,34 @@ class wordsVC: UIViewController, GKGameCenterControllerDelegate {
                 self.newGame()
                 self.imageChanger()
                 
-                
-                
-                
             })
+            
+            let action2 = UIAlertAction(title: "Leaderboard", style: .default, handler: { (action) -> Void in
+                
+                // Add 10 points to current score
+                //self.points = self.score
+                self.pointsLabel.text = "\(self.points)"
+                
+                // Submit score to GC leaderboard
+                let bestScoreInt = GKScore(leaderboardIdentifier: self.LEADERBOARD_ID)
+                bestScoreInt.value = Int64(self.points)
+                GKScore.report([bestScoreInt]) { (error) in
+                    if error != nil {
+                        print(error!.localizedDescription)
+                    } else {
+                        print("Best Score submitted to your Leaderboard!")
+                    }
+                }
+                let gcVC = GKGameCenterViewController()
+                gcVC.gameCenterDelegate = self
+                gcVC.viewState = .leaderboards
+                gcVC.leaderboardIdentifier = self.LEADERBOARD_ID
+                self.present(gcVC, animated: true, completion: nil)
+            })
+            
             // Add action buttons and present the Alert
             alert.addAction(action1)
-            
+            alert.addAction(action2)
 
             present(alert, animated: true, completion: nil)
             
@@ -210,5 +215,6 @@ class wordsVC: UIViewController, GKGameCenterControllerDelegate {
         
        
     }
+    
 }
 
