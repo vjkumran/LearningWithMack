@@ -11,14 +11,13 @@
 		284451531E481333008842D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 284451521E481333008842D5 /* Assets.xcassets */; };
 		284451561E481333008842D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 284451541E481333008842D5 /* LaunchScreen.storyboard */; };
 		3469C3F71E7F7A4000A0571F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3469C3F61E7F7A4000A0571F /* Default-568h@2x.png */; };
-		3469C3F91E7F7A7D00A0571F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3469C3F81E7F7A7D00A0571F /* ViewController.swift */; };
+		3469C3F91E7F7A7D00A0571F /* AbcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3469C3F81E7F7A7D00A0571F /* AbcViewController.swift */; };
 		3469C3FB1E7F7A9200A0571F /* wordsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3469C3FA1E7F7A9200A0571F /* wordsVC.swift */; };
 		3469C4001E7F7AAC00A0571F /* customSegues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3469C3FC1E7F7AAC00A0571F /* customSegues.swift */; };
 		3469C4011E7F7AAC00A0571F /* letter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3469C3FD1E7F7AAC00A0571F /* letter.swift */; };
-		3469C4021E7F7AAC00A0571F /* mathBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3469C3FE1E7F7AAC00A0571F /* mathBrain.swift */; };
-		3469C4031E7F7AAC00A0571F /* wordsBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3469C3FF1E7F7AAC00A0571F /* wordsBrain.swift */; };
 		3469C4061E7F7C3700A0571F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3469C4041E7F7C3700A0571F /* AppDelegate.swift */; };
-		3469C4091E7F7CFC00A0571F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3469C4081E7F7CFC00A0571F /* Info.plist */; };
+		348FD9B91E88E81300A4E501 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348FD9B81E88E81300A4E501 /* StoreKit.framework */; };
+		348FD9BB1E88E81E00A4E501 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348FD9BA1E88E81E00A4E501 /* GameKit.framework */; };
 		349D686D1E77C8E300326666 /* a.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 349D686C1E77C8E300326666 /* a.mp3 */; };
 		349D68831E77C8F700326666 /* f.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 349D686E1E77C8F700326666 /* f.mp3 */; };
 		349D68841E77C8F700326666 /* g.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 349D686F1E77C8F700326666 /* g.mp3 */; };
@@ -45,6 +44,9 @@
 		349D689D1E77C90400326666 /* c.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 349D68991E77C90400326666 /* c.mp3 */; };
 		349D689E1E77C90400326666 /* d.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 349D689A1E77C90400326666 /* d.mp3 */; };
 		349D689F1E77C90400326666 /* e.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 349D689B1E77C90400326666 /* e.mp3 */; };
+		34CE5C3D1E939C2B00098296 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 34CE5C3C1E939C2B00098296 /* GoogleService-Info.plist */; };
+		34CE5C3F1E9446E000098296 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CE5C3E1E9446E000098296 /* PopUpViewController.swift */; };
+		34CE5C411E9491B400098296 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CE5C401E9491B400098296 /* WelcomeViewController.swift */; };
 		C73D4777708227D8B4C4BCF0 /* Pods_learnWithMAc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7BEBFC23288C482BE015298 /* Pods_learnWithMAc.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,14 +56,15 @@
 		284451521E481333008842D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		284451551E481333008842D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3469C3F61E7F7A4000A0571F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		3469C3F81E7F7A7D00A0571F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Controller/ViewController.swift; sourceTree = "<group>"; };
+		3469C3F81E7F7A7D00A0571F /* AbcViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AbcViewController.swift; path = Controller/AbcViewController.swift; sourceTree = "<group>"; };
 		3469C3FA1E7F7A9200A0571F /* wordsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = wordsVC.swift; path = Controller/wordsVC.swift; sourceTree = "<group>"; };
 		3469C3FC1E7F7AAC00A0571F /* customSegues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = customSegues.swift; path = Models/customSegues.swift; sourceTree = "<group>"; };
 		3469C3FD1E7F7AAC00A0571F /* letter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = letter.swift; path = Models/letter.swift; sourceTree = "<group>"; };
-		3469C3FE1E7F7AAC00A0571F /* mathBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = mathBrain.swift; path = Models/mathBrain.swift; sourceTree = "<group>"; };
-		3469C3FF1E7F7AAC00A0571F /* wordsBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = wordsBrain.swift; path = Models/wordsBrain.swift; sourceTree = "<group>"; };
 		3469C4041E7F7C3700A0571F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "Supporting Files/AppDelegate.swift"; sourceTree = "<group>"; };
 		3469C4081E7F7CFC00A0571F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting Files/Info.plist"; sourceTree = "<group>"; };
+		348FD9B71E88E80C00A4E501 /* learnWithMAc.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = learnWithMAc.entitlements; sourceTree = "<group>"; };
+		348FD9B81E88E81300A4E501 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		348FD9BA1E88E81E00A4E501 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		349D686C1E77C8E300326666 /* a.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = a.mp3; path = audio/a.mp3; sourceTree = SOURCE_ROOT; };
 		349D686E1E77C8F700326666 /* f.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = f.mp3; path = audio/f.mp3; sourceTree = SOURCE_ROOT; };
 		349D686F1E77C8F700326666 /* g.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = g.mp3; path = audio/g.mp3; sourceTree = SOURCE_ROOT; };
@@ -88,6 +91,9 @@
 		349D68991E77C90400326666 /* c.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = c.mp3; path = audio/c.mp3; sourceTree = SOURCE_ROOT; };
 		349D689A1E77C90400326666 /* d.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = d.mp3; path = audio/d.mp3; sourceTree = SOURCE_ROOT; };
 		349D689B1E77C90400326666 /* e.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = e.mp3; path = audio/e.mp3; sourceTree = SOURCE_ROOT; };
+		34CE5C3C1E939C2B00098296 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		34CE5C3E1E9446E000098296 /* PopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		34CE5C401E9491B400098296 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		A7BEBFC23288C482BE015298 /* Pods_learnWithMAc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_learnWithMAc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF7C759031A3CE3BF76A31AC /* Pods-learnWithMAc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-learnWithMAc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-learnWithMAc/Pods-learnWithMAc.debug.xcconfig"; sourceTree = "<group>"; };
 		ED48FEB42402D6F98ADB06EB /* Pods-learnWithMAc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-learnWithMAc.release.xcconfig"; path = "Pods/Target Support Files/Pods-learnWithMAc/Pods-learnWithMAc.release.xcconfig"; sourceTree = "<group>"; };
@@ -98,7 +104,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				348FD9BB1E88E81E00A4E501 /* GameKit.framework in Frameworks */,
 				C73D4777708227D8B4C4BCF0 /* Pods_learnWithMAc.framework in Frameworks */,
+				348FD9B91E88E81300A4E501 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,8 +135,10 @@
 		2844514A1E481333008842D5 /* learnWithMAc */ = {
 			isa = PBXGroup;
 			children = (
+				348FD9B71E88E80C00A4E501 /* learnWithMAc.entitlements */,
 				286F23601E57BFE700F52868 /* Models */,
-				284451621E497AE2008842D5 /* Views */,
+				2844514F1E481333008842D5 /* Main.storyboard */,
+				284451541E481333008842D5 /* LaunchScreen.storyboard */,
 				28FC3A9A1E63757100B62432 /* Controllers */,
 				28FC3A991E63751800B62432 /* supporting files */,
 			);
@@ -168,24 +178,11 @@
 			name = audio;
 			sourceTree = "<group>";
 		};
-		284451621E497AE2008842D5 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				284451521E481333008842D5 /* Assets.xcassets */,
-				2844515D1E482923008842D5 /* audio */,
-				2844514F1E481333008842D5 /* Main.storyboard */,
-				284451541E481333008842D5 /* LaunchScreen.storyboard */,
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
 		286F23601E57BFE700F52868 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				3469C3FC1E7F7AAC00A0571F /* customSegues.swift */,
 				3469C3FD1E7F7AAC00A0571F /* letter.swift */,
-				3469C3FE1E7F7AAC00A0571F /* mathBrain.swift */,
-				3469C3FF1E7F7AAC00A0571F /* wordsBrain.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -193,7 +190,10 @@
 		28FC3A991E63751800B62432 /* supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				2844515D1E482923008842D5 /* audio */,
+				284451521E481333008842D5 /* Assets.xcassets */,
 				3469C4041E7F7C3700A0571F /* AppDelegate.swift */,
+				34CE5C3C1E939C2B00098296 /* GoogleService-Info.plist */,
 				3469C4081E7F7CFC00A0571F /* Info.plist */,
 			);
 			name = "supporting files";
@@ -202,7 +202,9 @@
 		28FC3A9A1E63757100B62432 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3469C3F81E7F7A7D00A0571F /* ViewController.swift */,
+				3469C3F81E7F7A7D00A0571F /* AbcViewController.swift */,
+				34CE5C401E9491B400098296 /* WelcomeViewController.swift */,
+				34CE5C3E1E9446E000098296 /* PopUpViewController.swift */,
 				3469C3FA1E7F7A9200A0571F /* wordsVC.swift */,
 			);
 			name = Controllers;
@@ -220,6 +222,8 @@
 		BCB28B286ABD71B9454294F0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				348FD9BA1E88E81E00A4E501 /* GameKit.framework */,
+				348FD9B81E88E81300A4E501 /* StoreKit.framework */,
 				A7BEBFC23288C482BE015298 /* Pods_learnWithMAc.framework */,
 			);
 			name = Frameworks;
@@ -260,8 +264,19 @@
 				TargetAttributes = {
 					284451471E481333008842D5 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = ZG96T3M585;
+						DevelopmentTeam = 4M9579ZP3U;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -303,8 +318,8 @@
 				349D68871E77C8F700326666 /* j.mp3 in Resources */,
 				349D68921E77C8F700326666 /* u.mp3 in Resources */,
 				349D68951E77C8F700326666 /* x.mp3 in Resources */,
+				34CE5C3D1E939C2B00098296 /* GoogleService-Info.plist in Resources */,
 				349D68961E77C8F700326666 /* y.mp3 in Resources */,
-				3469C4091E7F7CFC00A0571F /* Info.plist in Resources */,
 				349D689E1E77C90400326666 /* d.mp3 in Resources */,
 				349D68841E77C8F700326666 /* g.mp3 in Resources */,
 				349D688F1E77C8F700326666 /* r.mp3 in Resources */,
@@ -378,12 +393,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3469C4061E7F7C3700A0571F /* AppDelegate.swift in Sources */,
+				34CE5C3F1E9446E000098296 /* PopUpViewController.swift in Sources */,
 				3469C3FB1E7F7A9200A0571F /* wordsVC.swift in Sources */,
-				3469C4031E7F7AAC00A0571F /* wordsBrain.swift in Sources */,
 				3469C4001E7F7AAC00A0571F /* customSegues.swift in Sources */,
-				3469C4021E7F7AAC00A0571F /* mathBrain.swift in Sources */,
 				3469C4011E7F7AAC00A0571F /* letter.swift in Sources */,
-				3469C3F91E7F7A7D00A0571F /* ViewController.swift in Sources */,
+				3469C3F91E7F7A7D00A0571F /* AbcViewController.swift in Sources */,
+				34CE5C411E9491B400098296 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,12 +521,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AF7C759031A3CE3BF76A31AC /* Pods-learnWithMAc.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
-				DEVELOPMENT_TEAM = ZG96T3M585;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = learnWithMAc/learnWithMAc.entitlements;
+				DEVELOPMENT_TEAM = 4M9579ZP3U;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/SCLAlertView",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/learnWithMAc/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rainmantechnologies.learnWithMAc;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rainmantechnologies.learningWithMack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -521,12 +541,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = ED48FEB42402D6F98ADB06EB /* Pods-learnWithMAc.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
-				DEVELOPMENT_TEAM = ZG96T3M585;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = learnWithMAc/learnWithMAc.entitlements;
+				DEVELOPMENT_TEAM = 4M9579ZP3U;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/SCLAlertView",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/learnWithMAc/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rainmantechnologies.learnWithMAc;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rainmantechnologies.learningWithMack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

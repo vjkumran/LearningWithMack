@@ -8,5 +8,5 @@ target 'learnWithMAc' do
   # Pods for learnWithMAc
 	platform :ios, '7.0'
 	pod 'Canvas', '~> 0.1'
-	pod 'DCAnimationKit'
+	pod 'Firebase/AdMob'
 end
